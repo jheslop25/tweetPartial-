@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <p>you failed.</p>
-</body>
-</html>
+@extends('master')
+
+@section('title')
+    tweet error
+@endsection
+
+
+@section('content')
+<p>you failed.</p>
+@include('header')
+
+@endsection
