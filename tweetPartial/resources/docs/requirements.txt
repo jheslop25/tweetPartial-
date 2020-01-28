@@ -1,0 +1,49 @@
+create simple template
+
+VIEW:
+
+    -- display header --
+
+    -- display footer --
+
+    -- display tweets container --
+
+    -- display create tweet form --
+
+    -- display edit tweet form
+
+    -- display delete tweet button --
+
+    -- display view tweet button --
+
+CONTROLLER:
+
+    -- configure show tweet method to display single tweet --
+
+
+    Create a single-item view for browsing individual Tweet. --
+
+VIEW:
+
+    -- display header --
+
+    -- display footer --
+
+    -- display tweet container --
+
+    -- display nav buttons --
+
+CONTROLLER:
+
+    -- take in id from router --
+
+    -- query db for tweet --
+
+    -- pass tweet to view --
+
+    -- call view --
+
+
+Router:
+
+    -- establish link betweet POST request and CONTROLLER --

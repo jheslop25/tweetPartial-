@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header-container {
+    background-color: lightgray;
+    width: 100vw;
+    height: 10vh;
+}
+
+#tweets-container {
+    background-color: lightgreen;
+}
+
+#oneTweet-container {
+    background-color: lightgreen;
+
+}
+
+#footer-container {
+    background-color: lightgray;
+    width: 100vw;
+    height: 10vh;
+}

@@ -5,10 +5,12 @@
 @endsection
 
 @section('content')
+@include('header')
 
  {{-- @php
     var_dump($allTweets);
  @endphp --}}
+ <div id="tweets-container">
     @foreach ($allTweets as $tweet)
     <p> {{$tweet->content}}</p>
     <p><strong> {{$tweet->author}}</strong></p>
@@ -16,17 +18,14 @@
         @csrf
     <button type="submit" name="id" value="{{$tweet->id}}">delete post</button>
     </form>
+    <form action="/tweets/{tweetId}" method="get">
+        @csrf
+    <button type="submit" name="id" value="{{$tweet->id}}">View post</button>
+    </form>
     @endforeach
 
-    @include('header')
-
-    <form action="/tweets/" method="post">
-    @csrf
-        <p>enter content</p>
-    <input type="text" name="content">
-    <p>enter author</p>
-    <input type="text" name="author"><br><br><br>
-    <input type="submit" value="create tweet">
-
-    </form>
+<form action="/tweets/" method="post">
+    @include('editAdd')
+ </div>
+@include('footer')
 @endsection

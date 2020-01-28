@@ -37,11 +37,12 @@ class TweetController extends Controller
         return view('tweets', ['allTweets' => $tweets]);
     }
 
-    public function showTweet($id){
-        if($id > sizeof($this->tweets)){
-            return view('tweetError');
-        }
-        return view("tweets", ["allTweets" => [$this->tweets[$id]]]);
+    public function showTweet(Request $request){
+        $tweet = DB::select("select * from tweet where id = '$request->id'");
+        // if($request->id > sizeof($tweet)){
+        //     return view('tweetError');
+        // }
+        return view("oneTweet", ["allTweets" => $tweet]);
 
     }
 
@@ -57,5 +58,16 @@ class TweetController extends Controller
         $tweets = DB::select('select * from tweet');
 
         return view('tweets', ['allTweets' => $tweets]);
+    }
+
+    public function edit(Request $request){
+        //var_dump($request->tweetId);
+        DB::update("UPDATE `tweet` SET `content`= '$request->content',`author`= '$request->author' WHERE `id`= $request->tweetId;");
+        $tweet = DB::select("select * from tweet where id = '$request->tweetId'");
+
+        // if($request->id > sizeof($tweet)){
+        //     return view('tweetError');
+        // }
+        return view("oneTweet", ["allTweets" => $tweet]);
     }
 }
