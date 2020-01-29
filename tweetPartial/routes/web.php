@@ -28,3 +28,7 @@ Route::post('tweets/{id}', 'TweetController@');
 
 
 Route::get('/editTweets/{tweetId}', 'TweetController@edit');
+
+Route::get('/login-form', 'loginController@form');
+
+Route::get('/login', 'loginController@login');

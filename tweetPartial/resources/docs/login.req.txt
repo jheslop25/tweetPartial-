@@ -1,0 +1,35 @@
+MODLE:
+
+ -- make migration --
+
+ -- define migration
+
+ -- run migration
+
+ -- enter data
+
+
+VIEW:
+
+
+-- display login form --
+
+-- display success or failure message
+
+CONTROLLER:
+
+-- take user cred
+
+-- connect to db
+
+-- query db
+
+-- if else a view
+
+-- pass message to view
+
+ROUTER:
+
+-- take get request from login form
+
+-- get request -> login form --
